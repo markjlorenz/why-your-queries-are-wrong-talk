@@ -109,8 +109,10 @@ read -p "Press [ENTER] to continue..."
 vim dokb-first-degree.sql
 read -p "Press [ENTER] to continue..."
 
-./runner.sh dokb-single-degree-group.sql dokb-first-degree.sql
+./runner.sh dokb-single-degree-group.sql dokb-first-degree.sql dokb-second-degree.sql
 read -p "Press [ENTER] to continue..."
+
+git restore dokb-first-degree.sql
 
 # -PRE-CHECK ASSERTIONS-------------------------------
 cd ../../
@@ -168,6 +170,8 @@ read -p "Press [ENTER] to continue..."
 
 ./runner.sh store-3-is-right-pre.sql
 read -p "Press [ENTER] to continue..."
+
+git restore store-3-is-right-pre.sql
 
 # -CONCLUSION-----------------------------------------
 
